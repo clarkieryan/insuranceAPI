@@ -4,13 +4,13 @@ This repository houses the code for me SE31510 module. It's a basic REST API for
 insurance companies details.
 
 
-= Customer
+=== Customer
 - ID
 - forename
 - surname
 - email (Unique)
 
-= CustomerDetails
+=== CustomerDetails
 - dob
 - telNumber
 - street
@@ -23,14 +23,14 @@ insurance companies details.
 - quotesStored
 - incidents
 
-= QuoteDetails
+=== QuoteDetails
 - quoteRef
 - vehicleReg
 - estimatedMileage
 - estimatedVehicleValue
 - parkingLocation (Enumeration from DB)
 
-= Incidents
+=== Incidents
 - indidentID
 - date
 - value
@@ -40,7 +40,7 @@ insurance companies details.
 
 == Potential extras
 
-= pastConvictions
+=== pastConvictions
 - convictionID
 - type
 - date

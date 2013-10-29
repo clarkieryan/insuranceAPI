@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="insuranceAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="73" selection-start="628" selection-end="628" vertical-scroll-proportion="1.0714285">
+            <state line="32" column="3" selection-start="514" selection-end="514" vertical-scroll-proportion="0.52380955">
               <folding />
             </state>
           </provider>
@@ -523,7 +522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="73" selection-start="628" selection-end="628" vertical-scroll-proportion="1.0714285">
+        <state line="32" column="3" selection-start="514" selection-end="514" vertical-scroll-proportion="0.52380955">
           <folding />
         </state>
       </provider>
