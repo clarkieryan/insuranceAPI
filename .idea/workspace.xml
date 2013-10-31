@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/api/v1/quotes_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="insuranceAPI.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383226717263" ignored="false" />
     <file path="/readme.md" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383088967258" ignored="false" />
-    <file path="/README.rdoc" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383228197408" ignored="false" />
+    <file path="/README.rdoc" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383230200670" ignored="false" />
     <file path="/routes.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383181166136" ignored="false" />
     <file path="/inflections.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383181479383" ignored="false" />
     <file path="/customer_controller.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383092490341" ignored="false" />
@@ -41,19 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="18" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="44" selection-start="170" selection-end="170" vertical-scroll-proportion="0.17564403">
+            <state line="53" column="23" selection-start="802" selection-end="802" vertical-scroll-proportion="0.80679154">
               <folding />
             </state>
           </provider>
@@ -71,7 +60,7 @@
       <file leaf-file-name="customers_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/customers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="1796" selection-end="2327" vertical-scroll-proportion="0.0">
+            <state line="34" column="77" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -707,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/customers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1796" selection-end="2327" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/quotes_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="12" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
@@ -721,16 +703,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/customers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="18" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+        <state line="34" column="77" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="170" selection-end="170" vertical-scroll-proportion="0.17564403">
+        <state line="10" column="72" selection-start="170" selection-end="170" vertical-scroll-proportion="0.17564403">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="23" selection-start="802" selection-end="802" vertical-scroll-proportion="0.80679154">
           <folding />
         </state>
       </provider>

@@ -9,6 +9,7 @@ insurance companies details.
 - forename
 - surname
 - email (Unique)
+- password
 
 === CustomerDetails
 - customerID (FK)
@@ -21,8 +22,8 @@ insurance companies details.
 - licenceType
 - licenceHeldSince (Need to confirm)
 - occupation (Enumeration from DB)
-- quotesStored
-- incidents
+- quotesStored (FK)
+- incidents (FK)
 
 === QuoteDetails
 - quoteRef (PK)
@@ -53,7 +54,8 @@ insurance companies details.
 
 
 =TODO
+- API Key for added security
+- HTTPS url (OpenSSL)
 - Validation
 - Testing
 - API Documentation
--
