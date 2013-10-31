@@ -5,13 +5,13 @@ insurance companies details.
 
 
 === Customer
-- ID
+- ID (PK)
 - forename
 - surname
 - email (Unique)
 
 === CustomerDetails
-- customerID
+- customerID (FK)
 - dob
 - telNumber
 - street
@@ -25,7 +25,9 @@ insurance companies details.
 - incidents
 
 === QuoteDetails
-- quoteRef
+- quoteRef (PK)
+- customerID (FK)
+- incidents  (FKs)
 - vehicleReg
 - estimatedMileage
 - estimatedVehicleValue
@@ -35,7 +37,7 @@ insurance companies details.
 - windscreenCover Boolean
 
 === Incidents
-- indidentID
+- incidentID (PK)
 - date
 - value
 - type
@@ -48,3 +50,10 @@ insurance companies details.
 - convictionID
 - type
 - date
+
+
+=TODO
+- Validation
+- Testing
+- API Documentation
+-
