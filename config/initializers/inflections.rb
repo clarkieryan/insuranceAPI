@@ -14,3 +14,12 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+#Allows us to use API instead of Api
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.acronym 'API'
+end
+
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.acronym 'V1'
+end

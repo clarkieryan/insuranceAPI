@@ -1,6 +1,19 @@
 InsuranceAPI::Application.routes.draw do
+
+  resources :customers
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+
+  #Set up the URl /api and default it to output JSON
+  namespace :api, :defaults => {:format => :json} do
+    #Bit of API version control
+    namespace :v1 do
+      #Adding in customers so /api/v1/customers will work
+      resources :customers
+    end
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

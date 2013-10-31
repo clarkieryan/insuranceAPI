@@ -11,6 +11,7 @@ insurance companies details.
 - email (Unique)
 
 === CustomerDetails
+- customerID
 - dob
 - telNumber
 - street
@@ -29,6 +30,9 @@ insurance companies details.
 - estimatedMileage
 - estimatedVehicleValue
 - parkingLocation (Enumeration from DB)
+- policyExcess
+- breakdownCover (Enumeration)
+- windscreenCover Boolean
 
 === Incidents
 - indidentID
