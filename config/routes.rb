@@ -12,6 +12,9 @@ InsuranceAPI::Application.routes.draw do
     namespace :v1 do
       #Adding in customers so /api/v1/customers will work
       resources :customers
+      #API key functions
+      get 'APIKey/create' => 'api_key#create'
+      get 'APIKey' => 'api_key#index'
     end
   end
 

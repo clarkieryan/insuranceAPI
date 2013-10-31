@@ -54,8 +54,11 @@ insurance companies details.
 
 
 =TODO
-- API Key for added security
+- API Key for added security (?access_token=d7b60ece626e6c3e5511bf138bf31296 - Testing)
 - HTTPS url (OpenSSL)
 - Validation
 - Testing
 - API Documentation
+
+==Ideas
+- We are able to extend the API class so that we only allow registererd users to use the API
