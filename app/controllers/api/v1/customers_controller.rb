@@ -46,11 +46,6 @@ class API::V1::CustomersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
       @customer = Customer.find(params[:id])
-      #Throw an error if the record couldn't be found
-      rescue ActiveRecord::RecordNotFound
-        @customer = { :error => "404", :description => "Customer could not be found"}
-
-
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -60,6 +55,13 @@ class API::V1::CustomersController < ApplicationController
 
     def restrict_access
       api_key = APIKey.find_by_access_token(params[:access_token])
-      head :unauthorized unless api_key
+      if api_key
+        #TODO Add in proper code for unauthorised
+        respond_to do |format|
+          format.json { render :json => {:error => "Hell No", :description => "API Key not found/supplied"} }
+        end
+      else
+        api_key
+      end
     end
 end
