@@ -55,7 +55,7 @@ class API::V1::CustomersController < ApplicationController
 
     def restrict_access
       api_key = APIKey.find_by_access_token(params[:access_token])
-      if api_key
+      if !api_key
         #TODO Add in proper code for unauthorised
         respond_to do |format|
           format.json { render :json => {:error => "Hell No", :description => "API Key not found/supplied"} }

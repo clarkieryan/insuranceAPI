@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  customerID: 1
+  dob: 1
+  telNumber: 1
+  street: MyString
+  city: MyString
+  county: MyString
+  postCode: MyString
+  licenceType: MyString
+  licenceHeldSince: MyString
+  occupation: MyString
+  quotesStored: 1
+  incidents: 1
+
+two:
+  customerID: 1
+  dob: 1
+  telNumber: 1
+  street: MyString
+  city: MyString
+  county: MyString
+  postCode: MyString
+  licenceType: MyString
+  licenceHeldSince: MyString
+  occupation: MyString
+  quotesStored: 1
+  incidents: 1

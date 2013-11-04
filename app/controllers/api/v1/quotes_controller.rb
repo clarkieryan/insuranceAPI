@@ -28,10 +28,12 @@ class API::V1::QuotesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_quote
-    @quote = Customer.find(params[:id])
-      #Throw an error if the record couldn't be found
-  rescue ActiveRecord::RecordNotFound
-    @quote = { :error => "404", :description => "Customer could not be found"}
+    #Get the quote details first
+    #Find the customer
+    #Get customer details
+    #Get Incident details
+    @customer = Customer.find(params[:id])
+
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

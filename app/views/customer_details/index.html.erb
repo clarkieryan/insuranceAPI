@@ -1,0 +1,49 @@
+<h1>Listing customer_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customerid</th>
+      <th>Dob</th>
+      <th>Telnumber</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>County</th>
+      <th>Postcode</th>
+      <th>Licencetype</th>
+      <th>Licenceheldsince</th>
+      <th>Occupation</th>
+      <th>Quotesstored</th>
+      <th>Incidents</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_details.each do |customer_detail| %>
+      <tr>
+        <td><%= customer_detail.customerID %></td>
+        <td><%= customer_detail.dob %></td>
+        <td><%= customer_detail.telNumber %></td>
+        <td><%= customer_detail.street %></td>
+        <td><%= customer_detail.city %></td>
+        <td><%= customer_detail.county %></td>
+        <td><%= customer_detail.postCode %></td>
+        <td><%= customer_detail.licenceType %></td>
+        <td><%= customer_detail.licenceHeldSince %></td>
+        <td><%= customer_detail.occupation %></td>
+        <td><%= customer_detail.quotesStored %></td>
+        <td><%= customer_detail.incidents %></td>
+        <td><%= link_to 'Show', customer_detail %></td>
+        <td><%= link_to 'Edit', edit_customer_detail_path(customer_detail) %></td>
+        <td><%= link_to 'Destroy', customer_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer detail', new_customer_detail_path %>
