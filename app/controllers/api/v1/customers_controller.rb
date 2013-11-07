@@ -8,7 +8,7 @@ class API::V1::CustomersController < ApplicationController
     @customers = Customer.all
     #Respond to request will all data (Permissions maybe here)
     respond_to do |format|
-      format.json { render :json => @customers }
+      format.json { render :json => { "customers" => @customers } }
     end
   end
 
@@ -16,13 +16,17 @@ class API::V1::CustomersController < ApplicationController
   # GET /customers/1.json
   def show
       respond_to do |format|
-        format.json { render :json => @customer }
+        format.json { render :json => { "customer" => @customer }}
       end
   end
 
   # GET /customers/new
   def new
     @customer = Customer.new
+  end
+
+  # GET /customers/1/edit
+  def edit
   end
 
   # POST /customers
@@ -32,15 +36,22 @@ class API::V1::CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
         format.json { render action: 'show', status: :created, location: @customer }
       else
-        format.html { render action: 'new' }
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end
     end
   end
 
+  def update
+    respond_to do |format|
+      if @customer.update(customer_detail_params)
+        format.json { head :no_content }
+      else
+        format.json { render json: @customer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -53,6 +64,7 @@ class API::V1::CustomersController < ApplicationController
       params.require(:customer).permit(:forename, :surname, :email)
     end
 
+    #Functions ensure that the user has access via APIKey
     def restrict_access
       api_key = APIKey.find_by_access_token(params[:access_token])
       if !api_key

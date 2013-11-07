@@ -28,10 +28,8 @@ class CustomerDetailsController < ApplicationController
 
     respond_to do |format|
       if @customer_detail.save
-        format.html { redirect_to @customer_detail, notice: 'Customer detail was successfully created.' }
         format.json { render action: 'show', status: :created, location: @customer_detail }
       else
-        format.html { render action: 'new' }
         format.json { render json: @customer_detail.errors, status: :unprocessable_entity }
       end
     end
@@ -42,10 +40,8 @@ class CustomerDetailsController < ApplicationController
   def update
     respond_to do |format|
       if @customer_detail.update(customer_detail_params)
-        format.html { redirect_to @customer_detail, notice: 'Customer detail was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
         format.json { render json: @customer_detail.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +52,6 @@ class CustomerDetailsController < ApplicationController
   def destroy
     @customer_detail.destroy
     respond_to do |format|
-      format.html { redirect_to customer_details_url }
       format.json { head :no_content }
     end
   end

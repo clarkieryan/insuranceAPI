@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   #Adding in some basic exception control here for ActiveRecord
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   rescue_from ActiveRecord::RecordNotUnique, :with => :record_not_unique
-  rescue_from ActiveRecord::RecordInvalid, :with => :validation_error
+  #rescue_from ActiveRecord::RecordInvalid, :with => :validation_error
 
   private
     #Called when a record is not found
