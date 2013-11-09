@@ -8,7 +8,7 @@ class API::V1::CustomersController < ApplicationController
     @customers = Customer.all
     #Respond to request will all data (Permissions maybe here)
     respond_to do |format|
-      format.json { render :json => { "customers" => @customers } }
+      format.json { render :json => @customers }
     end
   end
 
@@ -16,7 +16,7 @@ class API::V1::CustomersController < ApplicationController
   # GET /customers/1.json
   def show
       respond_to do |format|
-        format.json { render :json => { "customer" => @customer }}
+        format.json { render :json => @customer}
       end
   end
 
@@ -36,7 +36,7 @@ class API::V1::CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
-        format.json { render action: 'show', status: :created, location: @customer }
+        format.json { render :json => { :code => "201", :description => "Created customer"} }
       else
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end

@@ -4,6 +4,8 @@ InsuranceAPI::Application.routes.draw do
 
   resources :customers
 
+  match '/*path' => 'application#cors_preflight_check', :via => :options
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +16,7 @@ InsuranceAPI::Application.routes.draw do
 
       #Adding in customers so /api/v1/customers will work
       resources :customers
+      resources :customer_details
 
       #Quotes route mainly to retrieve a 'Compiled quote'
       resources :quotes
@@ -21,6 +24,10 @@ InsuranceAPI::Application.routes.draw do
       #API key functions
       get 'APIKey/create' => 'api_key#create'
       get 'APIKey' => 'api_key#index'
+
+
+      match '/*path' => 'application#cors_preflight_check', :via => :options
+
     end
   end
 end
