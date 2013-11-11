@@ -33,7 +33,6 @@ class API::V1::CustomersController < ApplicationController
   # POST /customers.json
   def create
     @customer = Customer.new(customer_params)
-
     respond_to do |format|
       if @customer.save
         format.json { render :json => { :code => "201", :description => "Created customer"} }

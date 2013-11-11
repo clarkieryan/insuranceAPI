@@ -1,7 +1,7 @@
 class CreateCustomerDetails < ActiveRecord::Migration
   def change
     create_table :customer_details do |t|
-      t.integer :customerID
+      t.belongs_to :customer
       t.integer :dob
       t.integer :telNumber
       t.string :street

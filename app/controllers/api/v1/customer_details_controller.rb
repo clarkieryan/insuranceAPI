@@ -4,7 +4,8 @@ class API::V1::CustomerDetailsController < ApplicationController
   # GET /customer_details
   # GET /customer_details.json
   def index
-    @customer_details = CustomerDetail.all
+    @customer = Customer.find_by_id(params[:customer_id])
+    @customer_details = @customer.customer_detail
     respond_to do |format|
       format.json { render :json => @customer_details }
     end
@@ -30,11 +31,11 @@ class API::V1::CustomerDetailsController < ApplicationController
   # POST /customer_details
   # POST /customer_details.json
   def create
-    @customer_detail = CustomerDetail.new(customer_detail_params)
+    @customer = @customer = Customer.find_by_id(params[:customer_id])
 
     respond_to do |format|
-      if @customer_detail.save
-        format.json { render action: 'show', status: :created, location: @customer_detail }
+      if @customer.create_customer_detail(customer_detail_params)
+        format.json {  render :json => { :code => "201", :description => "Created customer"} }
       else
         format.json { render json: @customer_detail.errors, status: :unprocessable_entity }
       end
@@ -65,7 +66,7 @@ class API::V1::CustomerDetailsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer_detail
-      @customer_detail = CustomerDetail.find(params[:id])
+      @customer_detail = Customer.find(params[:customer_id]).CustomerDetail
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
