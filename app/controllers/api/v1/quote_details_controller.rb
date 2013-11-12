@@ -28,10 +28,8 @@ class QuoteDetailsController < ApplicationController
 
     respond_to do |format|
       if @quote_detail.save
-        format.html { redirect_to @quote_detail, notice: 'Quote detail was successfully created.' }
         format.json { render action: 'show', status: :created, location: @quote_detail }
       else
-        format.html { render action: 'new' }
         format.json { render json: @quote_detail.errors, status: :unprocessable_entity }
       end
     end
@@ -54,7 +52,6 @@ class QuoteDetailsController < ApplicationController
   def destroy
     @quote_detail.destroy
     respond_to do |format|
-      format.html { redirect_to quote_details_url }
       format.json { head :no_content }
     end
   end
