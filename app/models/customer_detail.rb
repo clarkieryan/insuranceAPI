@@ -4,7 +4,7 @@ class CustomerDetail < ActiveRecord::Base
   #Ensure Quote Refs are valid
 
   belongs_to :customer
-  #has_many :incidents
+  has_many :quote_detailses
 
 
 end

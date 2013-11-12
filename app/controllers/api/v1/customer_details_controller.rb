@@ -5,7 +5,8 @@ class API::V1::CustomerDetailsController < ApplicationController
   # GET /customer_details.json
   def index
     @customer = Customer.find_by_id(params[:customer_id])
-    @customer_details = @customer.customer_detail
+    #Using create as I want to return 422 unprocessable entity (API)
+    @customer_details = @customer.customer_detail!
     respond_to do |format|
       format.json { render :json => @customer_details }
     end

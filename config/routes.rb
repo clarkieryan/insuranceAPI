@@ -8,6 +8,7 @@ InsuranceAPI::Application.routes.draw do
       #Adding in customers so /api/v1/customers will work
       resources :customers do
         resources :customer_details
+        resources :quotes
        # match '/*path' => 'application#cors_preflight_check', :via => :options
       end
 

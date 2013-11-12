@@ -1,4 +1,4 @@
-class QuoteDetailsController < ApplicationController
+class QuotesController < ApplicationController
   before_action :set_quote_detail, only: [:show, :edit, :update, :destroy]
 
   # GET /quote_details
