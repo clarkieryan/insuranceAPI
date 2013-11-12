@@ -35,7 +35,7 @@ class API::V1::CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
     respond_to do |format|
       if @customer.save
-        format.json { render :json => { :code => "201", :description => "Created customer"} }
+        format.json { render :json => { :code => "201", :description => "Created customer", :customer => @customer} }
       else
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end

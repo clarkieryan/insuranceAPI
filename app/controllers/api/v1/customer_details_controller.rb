@@ -1,21 +1,13 @@
 class API::V1::CustomerDetailsController < ApplicationController
   before_action :set_customer_detail, only: [:show, :edit, :update, :destroy]
 
-  # GET /customer_details
+  # GET /customer/[customer_id]/customer_details
   # GET /customer_details.json
   def index
     @customer = Customer.find_by_id(params[:customer_id])
     @customer_details = @customer.customer_detail
     respond_to do |format|
       format.json { render :json => @customer_details }
-    end
-  end
-
-  # GET /customer_details/1
-  # GET /customer_details/1.json
-  def show
-    respond_to do |format|
-      format.json { render :json => @customer_detail }
     end
   end
 
@@ -28,8 +20,7 @@ class API::V1::CustomerDetailsController < ApplicationController
   def edit
   end
 
-  # POST /customer_details
-  # POST /customer_details.json
+  # POST /customer_details/[customer_id]/customer_details
   def create
     @customer = @customer = Customer.find_by_id(params[:customer_id])
 
@@ -43,7 +34,6 @@ class API::V1::CustomerDetailsController < ApplicationController
   end
 
   # PATCH/PUT /customer_details/1
-  # PATCH/PUT /customer_details/1.json
   def update
     respond_to do |format|
       if @customer_detail.update(customer_detail_params)
@@ -55,7 +45,6 @@ class API::V1::CustomerDetailsController < ApplicationController
   end
 
   # DELETE /customer_details/1
-  # DELETE /customer_details/1.json
   def destroy
     @customer_detail.destroy
     respond_to do |format|
