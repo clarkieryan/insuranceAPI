@@ -4,6 +4,8 @@ class API::V1::CustomersController < ApplicationController
 
   # GET /customers
   # GET /customers.json
+
+  #Returns all of the customer, shouldn't need to be used at all
   def index
     @customers = Customer.all
     #Respond to request will all data (Permissions maybe here)

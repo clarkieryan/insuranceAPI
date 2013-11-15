@@ -1,29 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  customerID: 1
-  dob: 1
-  telNumber: 1
-  street: MyString
-  city: MyString
-  county: MyString
-  postCode: MyString
-  licenceType: MyString
-  licenceHeldSince: MyString
-  occupation: MyString
-  quotesStored: 1
-  incidents: 1
+ #Auto generate 500 customerdetail objects
+ <% 500.times do |n| %>
+    customer_details_<%= n %>:
+        customerID: <%= n %>
+        dob: 18/08/1992
+        telNumber: 
+        street: MyString
+        city: MyString
+        county: MyString
+        postCode: MyString
+        licenceType: MyString
+        licenceHeldSince: MyString
+        occupation: occ_<%= n %>
+        quotesStored: quote_<%= n %>
+        incidents: incident_<%= n %>
+ <% end %>
 
-two:
-  customerID: 1
-  dob: 1
-  telNumber: 1
-  street: MyString
-  city: MyString
-  county: MyString
-  postCode: MyString
-  licenceType: MyString
-  licenceHeldSince: MyString
-  occupation: MyString
-  quotesStored: 1
-  incidents: 1

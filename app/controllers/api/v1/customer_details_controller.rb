@@ -12,18 +12,11 @@ class API::V1::CustomerDetailsController < ApplicationController
     end
   end
 
-  # GET /customer_details/new
-  def new
-    @customer_detail = CustomerDetail.new
-  end
-
-  # GET /customer_details/1/edit
-  def edit
-  end
 
   # POST /customer_details/[customer_id]/customer_details
   def create
-    @customer = @customer = Customer.find_by_id(params[:customer_id])
+    #The find_by_id() can be shortened Customer
+    @customer = Customer.find_by_id(params[:customer_id])
 
     respond_to do |format|
       if @customer.create_customer_detail(customer_detail_params)
@@ -36,8 +29,9 @@ class API::V1::CustomerDetailsController < ApplicationController
 
   # PATCH/PUT /customer_details/1
   def update
+    @customer = Customer.find_by_id(params[:customer_id])
     respond_to do |format|
-      if @customer_detail.update(customer_detail_params)
+      if @customer.update_customer_detail(customer_detail_params)
         format.json { head :no_content }
       else
         format.json { render json: @customer_detail.errors, status: :unprocessable_entity }
@@ -46,6 +40,7 @@ class API::V1::CustomerDetailsController < ApplicationController
   end
 
   # DELETE /customer_details/1
+  #TODO Will this destroy the attributed Customer object?
   def destroy
     @customer_detail.destroy
     respond_to do |format|

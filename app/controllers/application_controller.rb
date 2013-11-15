@@ -5,11 +5,13 @@ class ApplicationController < ActionController::Base
 
   after_filter :set_access_control_headers
 
-  #Adding in some basic exception control here for ActiveRecord
+  #Adding in some basic exception control here for ActiveRecord 
+  #This is to keep the API Restfull and to return a meaningfull error that can be parsed by the end-user
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   rescue_from ActiveRecord::RecordNotUnique, :with => :record_not_unique
-  #rescue_from ActiveRecord::RecordInvalid, :with => :validation_error
+  rescue_from ActiveRecord::RecordInvalid, :with => :validation_error
 
+  #This function returns a blank document whenever an HTTP OPTIONS request is sent, this is done to allow for CORS whilst testing on a local machine. AJAX throws an error when it's trying to conenct to a domain that's not it's own. 
 
   def cors_preflight_check
     logger.info ">>> responding to CORS request"
