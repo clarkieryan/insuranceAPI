@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131122120156) do
+ActiveRecord::Schema.define(version: 20131122131811) do
 
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
@@ -44,23 +44,18 @@ ActiveRecord::Schema.define(version: 20131122120156) do
     t.datetime "updated_at"
   end
 
-  create_table "quote_details", force: true do |t|
-    t.integer  "customer_id"
-    t.integer  "incidents_id"
-    t.string   "vehicleReg"
-    t.string   "estimatedMileage"
-    t.string   "estimatedVehicleValue"
-    t.string   "parkingLocation"
-    t.integer  "policyExcess"
-    t.integer  "breakdownCover"
-    t.integer  "windscreenCover"
+  create_table "incidents", force: true do |t|
+    t.integer  "quote_id"
+    t.date     "date"
+    t.integer  "value"
+    t.string   "type"
+    t.string   "desc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "quotes", force: true do |t|
     t.integer  "customer_id"
-    t.integer  "incident_id"
     t.string   "vehicleReg"
     t.integer  "estimatedMileage"
     t.integer  "estimatedVehicleValue"

@@ -1,9 +1,7 @@
 class CreateQuotes < ActiveRecord::Migration
   def change
     create_table :quotes do |t|
-      t.belongs_to :customer_id
-
-      t.integer :incident_id
+      t.belongs_to :customer
       t.string :vehicleReg
       t.integer :estimatedMileage
       t.integer :estimatedVehicleValue

@@ -13,6 +13,7 @@ class API::V1::QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+
     respond_to do |format|
       format.json {  render :json => @quote }
     end
@@ -58,7 +59,7 @@ class API::V1::QuotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
-      @quote = Customer.find(params[:customer_id]).quotes.find(params[:quote_id])
+      @quote = Customer.find(params[:customer_id]).quotes.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
