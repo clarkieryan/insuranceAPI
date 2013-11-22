@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotUnique, :with => :record_not_unique
   rescue_from ActiveRecord::RecordInvalid, :with => :validation_error
 
-  #This function returns a blank document whenever an HTTP OPTIONS request is sent, this is done to allow for CORS whilst testing on a local machine. AJAX throws an error when it's trying to conenct to a domain that's not it's own. 
+  #This function returns a blank document whenever an HTTP OPTIONS request is sent, this is done to allow for CORS whilst testing on a local machine. AJAX throws an error when it's trying to connect to a domain that's not it's own.
 
   def cors_preflight_check
     logger.info ">>> responding to CORS request"

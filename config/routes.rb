@@ -1,7 +1,5 @@
 InsuranceAPI::Application.routes.draw do
 
-  resources :quotes
-
   match '/*path' => 'application#cors_preflight_check', :via => :options
   #Set up the URl /api/v1 and default it to output JSON
   namespace :api, :defaults => {:format => :json} do
@@ -17,8 +15,10 @@ InsuranceAPI::Application.routes.draw do
       end
 
 
+
+
       #Quotes route mainly to retrieve a 'Compiled quote'
-      resources :quotes
+      get '/quote/:id' => 'quotes#show'
 
       #API key functions
       get 'APIKey/create' => 'api_key#create'
@@ -29,4 +29,5 @@ InsuranceAPI::Application.routes.draw do
 
     end
   end
+
 end

@@ -4,34 +4,30 @@ class API::V1::QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
-    @quotes = Quote.all
+    @quotes = Customer.find(params[:customer_id]).quotes
+    respond_to do |format|
+      format.json { render :json => @quotes}
+    end
   end
 
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+    respond_to do |format|
+      format.json {  render :json => @quote }
+    end
   end
 
-  # GET /quotes/new
-  def new
-    @quote = Quote.new
-  end
-
-  # GET /quotes/1/edit
-  def edit
-  end
 
   # POST /quotes
   # POST /quotes.json
   def create
-    @quote = Quote.new(quote_params)
+    @quote = Customer.find(params[:customer_id]).quotes.new(quote_params)
 
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @quote }
+        format.json { render :json => { :code => "201", :description => "Created quote", :quote => @quote} }
       else
-        format.html { render action: 'new' }
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end
     end
@@ -42,10 +38,9 @@ class API::V1::QuotesController < ApplicationController
   def update
     respond_to do |format|
       if @quote.update(quote_params)
-        format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
+
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +51,6 @@ class API::V1::QuotesController < ApplicationController
   def destroy
     @quote.destroy
     respond_to do |format|
-      format.html { redirect_to quotes_url }
       format.json { head :no_content }
     end
   end
@@ -64,7 +58,7 @@ class API::V1::QuotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
-      @quote = Quote.find(params[:id])
+      @quote = Customer.find(params[:customer_id]).quotes.find(params[:quote_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
