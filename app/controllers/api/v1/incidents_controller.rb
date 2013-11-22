@@ -1,5 +1,6 @@
 class API::V1::IncidentsController < ApplicationController
-  before_action :set_incident, only: [:show, :edit, :update, :destroy]
+  before_action :set_quote
+  before_action :set_incident, only: [ :show, :edit, :update, :destroy]
 
   # GET /incidents
   # GET /incidents.json
@@ -13,14 +14,14 @@ class API::V1::IncidentsController < ApplicationController
   # POST /incidents
   # POST /incidents.json
   def create
-    @incident = @quote.incidents.new(incident_params)
-
+    #@incident = @quote.incidents.new(incident_params)
+    logger.info params[:incident]
+    params[:incident].each do |incident|
+      @incident = @quote.incidents.new(incident)
+      @incident.save
+    end
     respond_to do |format|
-      if @incident.save
         format.json {  render :json => { :code => "201", :description => "Created incidents"} }
-      else
-        format.json { render json: @incident.errors, status: :unprocessable_entity }
-      end
     end
   end
 
@@ -49,13 +50,16 @@ class API::V1::IncidentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_incident
-      @quote = Customer.find(params[:customer_id]).quotes.find(params[:quote_id])
       @incident = @quote.incidents.find(params[:id])
 
     end
+  def set_quote
+    @quote = Customer.find(params[:customer_id]).quotes.find(params[:quote_id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def incident_params
-      params.require(:incident).permit(:date, :value, :type, :desc)
+      logger.info :customer_id
+      params.permit(:date, :value, :type, :desc, :incident)
     end
 end

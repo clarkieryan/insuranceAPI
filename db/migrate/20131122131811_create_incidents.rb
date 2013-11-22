@@ -4,7 +4,7 @@ class CreateIncidents < ActiveRecord::Migration
       t.belongs_to :quote
       t.date :date
       t.integer :value
-      t.string :type
+      t.string :incidentType
       t.string :desc
 
       t.timestamps

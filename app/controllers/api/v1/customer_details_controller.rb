@@ -1,5 +1,5 @@
 class API::V1::CustomerDetailsController < ApplicationController
-  before_action :set_customer_detail, only: [:show, :edit, :update, :destroy]
+  before_action :set_customer_detail, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /customer/[customer_id]/customer_details
   # GET /customer_details.json

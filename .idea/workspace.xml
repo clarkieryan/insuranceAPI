@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131122131811_create_incidents.rb" afterPath="$PROJECT_DIR$/db/migrate/20131122131811_create_incidents.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/customer_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/customer_details_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/incident.rb" afterPath="$PROJECT_DIR$/app/models/incident.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/incidents_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/incidents_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -22,7 +25,7 @@
     <file path="/application_controller.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383793020596" ignored="false" />
     <file path="/customer_detail.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385121375968" ignored="false" />
     <file path="/application.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1383529077051" ignored="false" />
-    <file path="/customer_details_controller.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385122916212" ignored="false" />
+    <file path="/customer_details_controller.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385135784484" ignored="false" />
     <file path="/20131104002741_create_customer_details.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385123759187" ignored="false" />
     <file path="/20131030003519_create_customers.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1384198838491" ignored="false" />
     <file path="/quote_details.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1384220086551" ignored="false" />
@@ -32,10 +35,10 @@
     <file path="/20131112012523_create_quote_details.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385121519666" ignored="false" />
     <file path="/quote.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385130997435" ignored="false" />
     <file path="/20131122120156_create_quotes.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385131313609" ignored="false" />
-    <file path="/incident.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385130987595" ignored="false" />
-    <file path="/incidents_controller.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385132127073" ignored="false" />
-    <file path="/20131122131811_create_incidents.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385130175654" ignored="false" />
-    <file path="/schema.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385130911408" ignored="false" />
+    <file path="/incident.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385144681678" ignored="false" />
+    <file path="/incidents_controller.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385144444546" ignored="false" />
+    <file path="/20131122131811_create_incidents.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385144553205" ignored="false" />
+    <file path="/schema.rb" changelist="0dc2b07b-47c3-45ca-8ccd-f2ca2e1b1b1a" time="1385144526867" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +63,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="incidents_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="incidents_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/incidents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+            <state line="20" column="20" selection-start="600" selection-end="600" vertical-scroll-proportion="0.4597701">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer_details_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="21" selection-start="1697" selection-end="1698" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="incident.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/incident.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="2" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customer_details_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/customer_details_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="24" selection-start="741" selection-end="741" vertical-scroll-proportion="0.040229887">
+            <state line="9" column="20" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,19 +123,19 @@
       <list>
         <option value="$PROJECT_DIR$/app/controllers/api/v1/quote_details_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20131112012523_create_quote_details.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/customer_details_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20131104002741_create_customer_details.rb" />
         <option value="$PROJECT_DIR$/app/models/customer.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/quotes_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/customer_detail.rb" />
-        <option value="$PROJECT_DIR$/app/models/incident.rb" />
         <option value="$PROJECT_DIR$/app/models/quote.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20131122131811_create_incidents.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20131122120156_create_quotes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/incidents_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/customer_details_controller.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131122131811_create_incidents.rb" />
+        <option value="$PROJECT_DIR$/app/models/incident.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/incidents_controller.rb" />
       </list>
     </option>
@@ -215,6 +236,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="insuranceAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="insureanceAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -678,13 +717,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="52" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.86206895">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/quotes_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="40" selection-start="1151" selection-end="1151" vertical-scroll-proportion="1.536">
@@ -734,23 +766,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/incident.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131030003519_create_customers.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="24" selection-start="112" selection-end="120" vertical-scroll-proportion="0.071428575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="27" selection-start="1890" selection-end="1890" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -762,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131122131811_create_incidents.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="121" selection-end="121" vertical-scroll-proportion="0.06896552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131104002741_create_customer_details.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="10" selection-start="240" selection-end="240" vertical-scroll-proportion="0.18390805">
@@ -776,16 +787,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/incidents_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+        <state line="42" column="3" selection-start="1596" selection-end="1596" vertical-scroll-proportion="1.0114943">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131122131811_create_incidents.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="214" selection-end="214" vertical-scroll-proportion="0.18390805">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/incident.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="2" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="21" selection-start="1697" selection-end="1698" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/customer_details_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="741" selection-end="741" vertical-scroll-proportion="0.040229887">
+        <state line="9" column="20" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/incidents_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="20" selection-start="600" selection-end="600" vertical-scroll-proportion="0.4597701">
           <folding />
         </state>
       </provider>
