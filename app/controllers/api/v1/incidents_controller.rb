@@ -4,7 +4,7 @@ class API::V1::IncidentsController < ApplicationController
   # GET /incidents
   # GET /incidents.json
   def index
-    @incidents = Customer.find(params[:customer_id]).quotes.find(params[:quote_id]).incidents.all
+    @incidents = @quote.incidents.all
     respond_to do |format|
       format.json { render :json => @incidents }
     end
@@ -13,14 +13,12 @@ class API::V1::IncidentsController < ApplicationController
   # POST /incidents
   # POST /incidents.json
   def create
-    @incident = Incident.new(incident_params)
+    @incident = @quote.incidents.new(incident_params)
 
     respond_to do |format|
       if @incident.save
-        format.html { redirect_to @incident, notice: 'Incident was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @incident }
+        format.json {  render :json => { :code => "201", :description => "Created incidents"} }
       else
-        format.html { render action: 'new' }
         format.json { render json: @incident.errors, status: :unprocessable_entity }
       end
     end
@@ -31,10 +29,8 @@ class API::V1::IncidentsController < ApplicationController
   def update
     respond_to do |format|
       if @incident.update(incident_params)
-        format.html { redirect_to @incident, notice: 'Incident was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
         format.json { render json: @incident.errors, status: :unprocessable_entity }
       end
     end
@@ -53,7 +49,9 @@ class API::V1::IncidentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_incident
-      @incident = Incident.find(params[:id])
+      @quote = Customer.find(params[:customer_id]).quotes.find(params[:quote_id])
+      @incident = @quote.incidents.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
