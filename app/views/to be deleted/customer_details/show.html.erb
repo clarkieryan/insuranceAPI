@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customerid:</strong>
+  <%= @customer_detail.customerID %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @customer_detail.dob %>
+</p>
+
+<p>
+  <strong>Telnumber:</strong>
+  <%= @customer_detail.telNumber %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @customer_detail.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @customer_detail.city %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @customer_detail.county %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @customer_detail.postCode %>
+</p>
+
+<p>
+  <strong>Licencetype:</strong>
+  <%= @customer_detail.licenceType %>
+</p>
+
+<p>
+  <strong>Licenceheldsince:</strong>
+  <%= @customer_detail.licenceHeldSince %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @customer_detail.occupation %>
+</p>
+
+<p>
+  <strong>Quotesstored:</strong>
+  <%= @customer_detail.quotesStored %>
+</p>
+
+<p>
+  <strong>Incidents:</strong>
+  <%= @customer_detail.incidents %>
+</p>
+
+<%= link_to 'Edit', edit_customer_detail_path(@customer_detail) %> |
+<%= link_to 'Back', customer_details_path %>
