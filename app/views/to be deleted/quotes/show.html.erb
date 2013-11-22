@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @quote.customer_id %>
+</p>
+
+<p>
+  <strong>Incident:</strong>
+  <%= @quote.incident_id %>
+</p>
+
+<p>
+  <strong>Vehiclereg:</strong>
+  <%= @quote.vehicleReg %>
+</p>
+
+<p>
+  <strong>Estimatedmileage:</strong>
+  <%= @quote.estimatedMileage %>
+</p>
+
+<p>
+  <strong>Estimatedvehiclevalue:</strong>
+  <%= @quote.estimatedVehicleValue %>
+</p>
+
+<p>
+  <strong>Parkinglocation:</strong>
+  <%= @quote.parkingLocation %>
+</p>
+
+<p>
+  <strong>Policyexcess:</strong>
+  <%= @quote.policyExcess %>
+</p>
+
+<p>
+  <strong>Breakdowncover:</strong>
+  <%= @quote.breakdownCover %>
+</p>
+
+<p>
+  <strong>Windscreencover:</strong>
+  <%= @quote.windscreenCover %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

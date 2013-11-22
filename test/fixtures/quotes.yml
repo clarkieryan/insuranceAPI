@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  customer_id: 1
+  incident_id: 1
+  vehicleReg: MyString
+  estimatedMileage: 1
+  estimatedVehicleValue: 1
+  parkingLocation: MyString
+  policyExcess: 1
+  breakdownCover: false
+  windscreenCover: false
+
+two:
+  customer_id: 1
+  incident_id: 1
+  vehicleReg: MyString
+  estimatedMileage: 1
+  estimatedVehicleValue: 1
+  parkingLocation: MyString
+  policyExcess: 1
+  breakdownCover: false
+  windscreenCover: false

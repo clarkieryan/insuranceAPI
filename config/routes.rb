@@ -1,5 +1,7 @@
 InsuranceAPI::Application.routes.draw do
 
+  resources :quotes
+
   match '/*path' => 'application#cors_preflight_check', :via => :options
   #Set up the URl /api/v1 and default it to output JSON
   namespace :api, :defaults => {:format => :json} do
