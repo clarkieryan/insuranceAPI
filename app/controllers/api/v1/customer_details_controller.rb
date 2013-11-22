@@ -6,7 +6,7 @@ class API::V1::CustomerDetailsController < ApplicationController
   def index
     @customer = Customer.find_by_id(params[:customer_id])
     #Using create as I want to return 422 unprocessable entity (API)
-    @customer_details = @customer.customer_detail!
+    @customer_details = @customer.customer_detail
     respond_to do |format|
       format.json { render :json => @customer_details }
     end
@@ -51,7 +51,7 @@ class API::V1::CustomerDetailsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer_detail
-      @customer_detail = Customer.find(params[:customer_id]).CustomerDetail
+      @customer_detail = Customer.find(params[:customer_id]).customer_detail
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

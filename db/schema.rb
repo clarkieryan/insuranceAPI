@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131104002741) do
+ActiveRecord::Schema.define(version: 20131112012523) do
 
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20131104002741) do
   end
 
   create_table "customer_details", force: true do |t|
-    t.integer  "customerID"
+    t.integer  "customer_id"
     t.integer  "dob"
     t.integer  "telNumber"
     t.string   "street"
@@ -40,6 +40,20 @@ ActiveRecord::Schema.define(version: 20131104002741) do
     t.string   "forename"
     t.string   "surname"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quote_details", force: true do |t|
+    t.integer  "customer_id"
+    t.integer  "incidents_id"
+    t.string   "vehicleReg"
+    t.string   "estimatedMileage"
+    t.string   "estimatedVehicleValue"
+    t.string   "parkingLocation"
+    t.integer  "policyExcess"
+    t.integer  "breakdownCover"
+    t.integer  "windscreenCover"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
