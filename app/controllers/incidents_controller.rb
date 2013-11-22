@@ -6,11 +6,7 @@ class API::V1::IncidentsController < ApplicationController
   def index
     @incidents = Customer.find(params[:customer_id]).quotes.find(params[:quote_id]).incidents.all
     respond_to do |format|
-      if @incidents
-        format.json { render :json => @incidents }
-      else
-        format.json {render :json =>  { :code => "404", :description => "Couldn't find any incidents"} }
-      end
+      format.json { render :json => @incidents }
     end
   end
 
