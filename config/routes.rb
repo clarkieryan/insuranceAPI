@@ -20,7 +20,7 @@ InsuranceAPI::Application.routes.draw do
 
 
       #Quotes route mainly to retrieve a 'Compiled quote'
-      get '/quote/:id' => 'quotes#show'
+      get '/quote/:id' => 'quotes#getQuote'
 
       #API key functions
       get 'APIKey/create' => 'api_key#create'

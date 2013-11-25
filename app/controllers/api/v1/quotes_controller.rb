@@ -56,6 +56,13 @@ class API::V1::QuotesController < ApplicationController
     end
   end
 
+  def getQuote
+    @quote = Quote.find(params[:id])
+    respond_to do |format|
+      format.json { render json: @quote }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
