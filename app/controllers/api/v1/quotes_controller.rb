@@ -13,7 +13,6 @@ class API::V1::QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
-
     respond_to do |format|
       format.json {  render :json => @quote }
     end

@@ -57,7 +57,7 @@ insurance companies details.
 
 - HTTPS url (OpenSSL) (At the end)
 - Validation
-- TESTING - Read up on train
+- Testing - YAML not working
 - API Documentation
 - Clean up code
 - Set up look up tables 
@@ -66,7 +66,7 @@ insurance companies details.
 - Enumerations
 	- City
 	- County
-
+- Add in premium calculation
 
 =Flair
 - API Key for added security (?access_token=d7b60ece626e6c3e5511bf138bf31296 - Testing)

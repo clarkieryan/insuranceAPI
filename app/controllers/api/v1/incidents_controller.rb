@@ -1,5 +1,5 @@
 class API::V1::IncidentsController < ApplicationController
-  before_action :set_quote
+  before_action :set_quote, except:[:getIncidents]
   before_action :set_incident, only: [ :show, :edit, :update, :destroy]
 
   # GET /incidents
@@ -44,6 +44,14 @@ class API::V1::IncidentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to incidents_url }
       format.json { head :no_content }
+    end
+  end
+
+  def getIncidents
+    @quote = Quote.find(params[:quote_id]) 
+    @incidents = @quote.incidents.all
+    respond_to do |format|
+      format.json { render :json => @incidents }
     end
   end
 
