@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20131122131811) do
     t.integer  "quote_id"
     t.date     "date"
     t.integer  "value"
-    t.string   "type"
+    t.string   "incidentType"
     t.string   "desc"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -62,7 +62,9 @@ ActiveRecord::Schema.define(version: 20131122131811) do
     t.string   "parkingLocation"
     t.integer  "policyExcess"
     t.boolean  "breakdownCover"
+    t.string   "breakdownType"
     t.boolean  "windscreenCover"
+    t.integer  "windscreenExcess"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

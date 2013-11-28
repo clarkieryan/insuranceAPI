@@ -35,7 +35,9 @@ insurance companies details.
 - parkingLocation (Enumeration from DB)
 - policyExcess
 - breakdownCover (Enumeration)
+	- breakdownType
 - windscreenCover Boolean
+	- windscreenExcess integer
 
 === Incidents
 - incidentID (PK)

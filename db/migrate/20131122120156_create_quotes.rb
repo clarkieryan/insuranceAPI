@@ -8,7 +8,9 @@ class CreateQuotes < ActiveRecord::Migration
       t.string :parkingLocation
       t.integer :policyExcess
       t.boolean :breakdownCover
+      t.string :breakdownType
       t.boolean :windscreenCover
+      t.integer :windscreenExcess
 
       t.timestamps
     end

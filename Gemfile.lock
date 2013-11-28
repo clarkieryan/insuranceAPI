@@ -35,6 +35,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    enumerate_it (1.2.0)
+      activesupport (>= 3.0.0)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -109,6 +111,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  enumerate_it
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.0)
