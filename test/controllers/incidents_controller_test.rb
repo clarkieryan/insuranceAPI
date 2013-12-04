@@ -2,6 +2,7 @@ require 'test_helper'
 
 class IncidentsControllerTest < ActionController::TestCase
   setup do
+    @controller = API::V1::IncidentsController.new
     @incident = incidents(:one)
   end
 

@@ -1,21 +1,19 @@
 one:
-  customer_id: 1
-  incident_id: 1
-  vehicleReg: MyString
-  estimatedMileage: 1
-  estimatedVehicleValue: 1
-  parkingLocation: MyString
-  policyExcess: 1
-  breakdownCover: false
-  windscreenCover: false
+    customer_id: 1
+    vehicleReg: "BP53 WHJ"
+    estimatedMileage: 1
+    estimatedVehicleValue: 1
+    parkingLocation: "Driveway"
+    policyExcess: 1
+    breakdownCover: false
+    windscreenCover: false
 
 two:
-  customer_id: 1
-  incident_id: 1
-  vehicleReg: MyString
-  estimatedMileage: 1
-  estimatedVehicleValue: 1
-  parkingLocation: MyString
-  policyExcess: 1
-  breakdownCover: false
-  windscreenCover: false
+    customer_id: 1
+    vehicleReg: "BP54 WHT"
+    estimatedMileage: 1
+    estimatedVehicleValue: 1
+    parkingLocation: "Street"
+    policyExcess: 1
+    breakdownCover: false
+    windscreenCover: false

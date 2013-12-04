@@ -23,7 +23,7 @@ class API::V1::QuotesController < ApplicationController
   # POST /quotes.json
   def create
     @quote = Customer.find(params[:customer_id]).quotes.new(quote_params)
-
+    
     respond_to do |format|
       if @quote.save
         format.json { render :json => { :code => "201", :description => "Created quote", :quote => @quote} }
@@ -56,9 +56,17 @@ class API::V1::QuotesController < ApplicationController
   end
 
   def getQuote
-    @quote = Quote.find(params[:id])
+    @customer = Customer.find_by_email(params[:email])
+    if @customer 
+      @customer_details = @customer.customer_detail
+      @quote = @customer.quotes.find_by_id(params[:id])
+      if @quote 
+        @incidents = @quote.incidents
+      end
+    end
+
     respond_to do |format|
-      format.json { render json: @quote }
+      format.json { render :json => { :customer => @customer, :customer_details => @customer_details, :body => @quote,  :incidents => @incidents } }
     end
   end
 
@@ -70,6 +78,9 @@ class API::V1::QuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
-      params.require(:quote).permit(:customer_id, :incident_id, :vehicleReg, :estimatedMileage, :estimatedVehicleValue, :parkingLocation, :policyExcess, :breakdownCover, :breakdownType, :windscreenCover, :windscreenExcess)
+      r = Random.new
+      rand = r.rand(300..800)
+
+      params.require(:quote).permit(:customer_id, :incident_id, :vehicleReg, :estimatedMileage, :estimatedVehicleValue, :parkingLocation, :policyExcess, :breakdownCover, :breakdownType, :windscreenCover, :windscreenExcess).merge(premium: rand)
     end
 end

@@ -17,11 +17,15 @@ InsuranceAPI::Application.routes.draw do
       end
 
 
+      # Allow search 
+      match "quote/:email/:id" => "quotes#getQuote",
+      :constraints => { :email => /.+%40.+\..*/ }, via: [:get]
 
 
       #Quotes route mainly to retrieve a 'Compiled quote'
       get '/quote/:id' => 'quotes#getQuote'
-      get '/quote/:quote_id/incidents' => 'incidents#getIncidents'
+
+      get '/quotes/:name' => 'quotes#getQuoteFromUniquq'
 
       #API key functions
       get 'APIKey/create' => 'api_key#create' 

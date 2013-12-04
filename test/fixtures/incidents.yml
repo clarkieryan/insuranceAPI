@@ -3,11 +3,11 @@
 one:
   date: 2013-11-22
   value: 1
-  type: 
+  incidentType: 
   desc: MyString
 
 two:
   date: 2013-11-22
   value: 1
-  type: 
+  incidentType: 
   desc: MyString

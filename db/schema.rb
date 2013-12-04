@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20131122131811) do
     t.string   "breakdownType"
     t.boolean  "windscreenCover"
     t.integer  "windscreenExcess"
+    t.integer  "premium"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

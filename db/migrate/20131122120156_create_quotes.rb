@@ -11,6 +11,7 @@ class CreateQuotes < ActiveRecord::Migration
       t.string :breakdownType
       t.boolean :windscreenCover
       t.integer :windscreenExcess
+      t.integer :premium
 
       t.timestamps
     end

@@ -1,8 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-<% 500.times do |n| %>
-	customer_<%= n %>:
-		forename:name_<%= n %>
-		surname:name_<%= n %>
-		email:user_<%= n %>%gmail.com
-<% end %>
+  one:
+    forename: name_1
+    surname: name_1
+    email: user_1@gmail.com
+  
+  two:
+    forename: name_2
+    surname: name_2
+    email: user_2@gmail.com

@@ -2,6 +2,7 @@ require 'test_helper'
 
 class QuotesControllerTest < ActionController::TestCase
   setup do
+    @controller = API::V1::QuotesController.new
     @quote = quotes(:one)
   end
 
