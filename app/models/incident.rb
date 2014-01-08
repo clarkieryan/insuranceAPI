@@ -4,4 +4,5 @@ class Incident < ActiveRecord::Base
 
   #Resolves type issue
   self.inheritance_column = nil
+
 end

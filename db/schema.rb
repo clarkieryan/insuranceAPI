@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20131122131811) do
   end
 
   create_table "customers", force: true do |t|
+    t.string   "title"
     t.string   "forename"
     t.string   "surname"
     t.string   "email"

@@ -58,20 +58,8 @@ insurance companies details.
 =TODO
 
 - HTTPS url (OpenSSL) (At the end)
-- Validation
 - Testing - YAML not working
-- API Documentation
 - Clean up code
 - Set up look up tables 
 	- Occupation
 	- Policy Excess (Range)
-- Enumerations
-	- City
-	- County
-- Add in premium calculation
-
-=Flair
-- API Key for added security (?access_token=d7b60ece626e6c3e5511bf138bf31296 - Testing)
-    - Extend the API class for registered users?
-    - Add in frontend to generate API Key
-- Conviction

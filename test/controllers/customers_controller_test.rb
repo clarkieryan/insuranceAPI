@@ -4,6 +4,7 @@ class CustomersControllerTest < ActionController::TestCase
   setup do
     @controller = API::V1::CustomersController.new
     @customer = customers(:one)
+
   end
 
   test "should get index" do

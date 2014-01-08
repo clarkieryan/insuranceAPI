@@ -1,12 +1,9 @@
 InsuranceAPI::Application.routes.draw do
 
-  resources :incidents
-
   match '/*path' => 'application#cors_preflight_check', :via => :options
   #Set up the URl /api/v1 and default it to output JSON
   namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
-
       #Adding in customers so /api/v1/customers will work
       resources :customers do
         resources :customer_details
@@ -18,8 +15,7 @@ InsuranceAPI::Application.routes.draw do
 
 
       # Allow search 
-      match "quote/:email/:id" => "quotes#getQuote",
-      :constraints => { :email => /.+%40.+\..*/ }, via: [:get]
+      match "quote/:email/:id" => "quotes#getQuote", :constraints => { :email => /.+%40.+\..*/ }, via: [:get]
 
       #API key functions
       get 'APIKey/create' => 'api_key#create' 

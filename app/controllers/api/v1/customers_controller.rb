@@ -62,7 +62,7 @@ class API::V1::CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:forename, :surname, :email)
+      params.require(:customer).permit(:title, :title, :forename, :surname, :email)
     end
 
     #Functions ensure that the user has access via APIKey

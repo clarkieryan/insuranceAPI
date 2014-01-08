@@ -1,4 +1,5 @@
 class API::V1::IncidentsController < ApplicationController
+  before_filter :restrict_access
   before_action :set_quote, except:[:getIncidents]
   before_action :set_incident, only: [ :show, :edit, :update, :destroy]
 
@@ -69,5 +70,16 @@ class API::V1::IncidentsController < ApplicationController
     def incident_params
       logger.info :customer_id
       params.permit(:date, :value, :type, :desc, :incident)
+    end
+
+    def restrict_access
+      api_key = APIKey.find_by_access_token(params[:access_token])
+      if !api_key
+        respond_to do |format|
+          format.json { render :json => {:error => "Access Denied", :description => "API Key not found/supplied"} }
+        end
+      else
+        api_key
+      end
     end
 end

@@ -1,4 +1,5 @@
 class API::V1::QuotesController < ApplicationController
+  before_filter :restrict_access
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   # GET /quotes
@@ -55,6 +56,8 @@ class API::V1::QuotesController < ApplicationController
     end
   end
 
+  # GET /quote/test@test.com/3 
+  # Get's a customers whole set of quote
   def getQuote
     @customer = Customer.find_by_email(params[:email])
     if @customer 
@@ -64,7 +67,6 @@ class API::V1::QuotesController < ApplicationController
         @incidents = @quote.incidents
       end
     end
-
     respond_to do |format|
       format.json { render :json => { :customer => @customer, :customer_details => @customer_details, :body => @quote,  :incidents => @incidents } }
     end
@@ -79,8 +81,20 @@ class API::V1::QuotesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
       r = Random.new
+      #Get a new random integer between 300 and 800
       rand = r.rand(300..800)
 
       params.require(:quote).permit(:customer_id, :incident_id, :vehicleReg, :estimatedMileage, :estimatedVehicleValue, :parkingLocation, :policyExcess, :breakdownCover, :breakdownType, :windscreenCover, :windscreenExcess).merge(premium: rand)
+    end
+
+    def restrict_access
+      api_key = APIKey.find_by_access_token(params[:access_token])
+      if !api_key
+        respond_to do |format|
+          format.json { render :json => {:error => "Access Denied", :description => "API Key not found/supplied"} }
+        end
+      else
+        api_key
+      end
     end
 end
