@@ -1,7 +1,8 @@
 == Insurance company API
 
-This repository houses the code for me SE31510 module. It's a basic REST API for an
-insurance companies details.
+This repository houses the code for my SE31510 module, for this assignment I received a first.
+
+The app creates a basic REST API to allow a customer to purchase insurance from the broker.  There are 2 parts, this and the insuranceFront repository which holds an Angular frontend that interfaces with the API.
 
 
 === Customer
@@ -45,21 +46,3 @@ insurance companies details.
 - value
 - type
 - desc
-
-
-== Potential extras
-
-=== pastConvictions
-- convictionID
-- type
-- date
-
-
-=TODO
-
-- HTTPS url (OpenSSL) (At the end)
-- Testing - YAML not working
-- Clean up code
-- Set up look up tables 
-	- Occupation
-	- Policy Excess (Range)
